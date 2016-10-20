@@ -414,3 +414,57 @@ list_find_node(t_list *list, void *f_compare_arg)
     }
   return (NULL);
 }
+
+
+static void _list_sort_swap_data(t_lnode *a, t_lnode *b)
+{
+  void *tmp;
+
+  tmp = a->data;
+  a->data = b->data;
+  b->data = tmp;
+}
+
+void
+list_sort_asc(t_list *list)
+{
+  t_lnode *w;
+  int again;
+    
+  if (list->size < 2)
+    return ;
+  do
+    {
+      again = 0;
+      for (w = list->head; w != NULL; w = w->next)
+	{
+	  if (list->f_compare(w, w->next) > 0) /* sort ASC */
+	    {
+	      _list_sort_swap_data(w, w->next);
+	      again = 1;
+	    }
+	}
+    } while (again != 0);
+}
+
+void
+list_sort_desc(t_list *list)
+{
+  t_lnode *w;
+  int again;
+
+  if (list->size < 2)
+    return ;
+  do
+    {
+      again = 0;
+      for (w = list->head; w != NULL; w = w->next)
+	{
+	  if (list->f_compare(w, w->next) < 0) /* sort DESC */
+	    {
+	      _list_sort_swap_data(w, w->next);
+	      again = 1;
+	    }
+	}
+    } while (again != 0);
+}

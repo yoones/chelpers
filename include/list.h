@@ -47,5 +47,7 @@ void list_unique(t_list *list);
 t_lnode * list_extract_node(t_list *list, t_lnode *position);
 void list_merge(t_list *list_a, t_list *list_b);
 void list_reverse(t_list *list);
+void list_sort_asc(t_list *list);
+void list_sort_desc(t_list *list);
 
 #endif
