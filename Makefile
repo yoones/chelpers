@@ -9,6 +9,7 @@ NAME		=	libchelpers.so
 
 _SRCS		=	join.c \
 			list.c \
+			btree.c \
 			print_error_and_abort.c \
 			split.c \
 			xfunctions.c
