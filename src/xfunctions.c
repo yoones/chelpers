@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "print_error_and_abort.h"
-#include "list.h"
 
 void *
 xmalloc(size_t size)
