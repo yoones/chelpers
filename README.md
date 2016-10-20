@@ -16,4 +16,4 @@ How to compile this library:
 How to compile and link your program against this library:
 ---
 
-`gcc <your .{c,o} files -I path/to/chelpers_directory/include -L path/to/chelpers_directory -lchelpers`
+`gcc <your .{c,o} files> -I path/to/chelpers_directory/include -L path/to/chelpers_directory -lchelpers`
